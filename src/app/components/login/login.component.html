@@ -1,34 +1,40 @@
-<form action="#" class="flex flex-col mx-auto max-w-xs p-4 gap-2">
-  <div class="flex flex-col">
+<form
+  class="flex flex-col mx-auto max-w-lg border-gray-300 border-2 rounded-lg p-8">
+  <h2 class="text-center text-4xl font-medium mb-6">Bienvenido!</h2>
+  <div class="flex flex-col mb-4">
+    <label for="username" class="font-semibold mb-2">Nombre de usuario</label>
     <input
       type="text"
       name="username"
       id="username"
-      minlength="3"
-      maxlength="25"
       placeholder="Nombre de usuario"
-      class="border-2 border-black rounded-lg p-2 invalid:border-red-500 invalid:text-red-500 invalid:outline-red-500 peer" />
-    <small class="hidden text-red-500 peer-invalid:block"
-      >Debe contener al menos 3 caracteres y un máximo de 25 caracteres</small
-    >
+      class="border-2 border-gray-300 shadow rounded-lg p-2 invalid:border-red-500 invalid:text-red-500 invalid:outline-red-500 peer" />
+    <p>
+      <small class="hidden text-red-500 peer-invalid:block"
+        >Debe contener al menos 3 caracteres y un máximo de 25 caracteres</small
+      >
+    </p>
   </div>
-  <div class="flex flex-col">
+  <div class="flex flex-col mb-4">
+    <label for="password" class="font-semibold mb-2">Contraseña</label>
     <input
       type="password"
       name="password"
-      id="userPassword"
-      minlength="8"
-      maxlength="32"
-      placeholder="Contraseña"
-      class="border-2 border-black rounded-lg p-2 invalid:border-red-500 invalid:text-red-500 invalid:outline-red-500 peer" />
-    <small class="text-red-500 hidden peer-invalid:block"
-      >Debe tener al menos 8 caracteres y un máximo de 32 caracteres</small
-    >
+      id="password"
+      placeholder="********"
+      class="border-2 border-gray-300 shadow rounded-lg p-2 invalid:border-red-500 invalid:text-red-500 invalid:outline-red-500 peer" />
+    <p>
+      <small class="text-red-500 hidden peer-invalid:block"
+        >Debe tener al menos 8 caracteres y un máximo de 32 caracteres</small
+      >
+    </p>
   </div>
-  <a href="#" class="text-blue-400 text-sm">Has olvidado tu contraseña?</a>
+  <a href="#" class="text-blue-400 text-sm text-right"
+    >Has olvidado tu contraseña?</a
+  >
   <button
     type="submit"
-    class="bg-black my-5 hover:bg-gray-500 transition duration-300 ease-in-out text-white max-w-xs rounded-lg py-2">
+    class="bg-blue-500 my-5 hover:bg-blue-400 transition duration-300 ease-in-out text-white font-semibold rounded-full py-2">
     Iniciar Sesión
   </button>
   <a href="#" class="text-blue-400 text-sm text-center"
