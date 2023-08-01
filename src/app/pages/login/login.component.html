@@ -1,5 +1,6 @@
 <main class="min-h-screen min-w-full flex justify-center items-center">
-  <form class="flex flex-col max-w-lg border rounded-lg p-8">
+  <form
+    class="flex flex-col max-w-lg border rounded-lg p-8 shadow md:min-w-[32rem]">
     <h3 class="text-center text-2xl mb-6">Bienvenido!</h3>
     <div class="flex flex-col mb-4">
       <label for="username" class="mb-2 text-sm font-bold text-gray-700"
@@ -9,10 +10,9 @@
         type="email"
         name="email"
         id="email"
-        required
         autocomplete="email"
         placeholder="Correo electrónico"
-        class="px-3 py-2 text-sm text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline invalid:border-red-500 invalid:text-red-500 invalid:outline-red-500 peer" />
+        class="px-3 py-2 text-sm text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline peer" />
       <p>
         <small class="hidden text-red-500 peer-invalid:block"
           >Debe cumplir con un formato válido de correo electrónico</small
@@ -27,10 +27,9 @@
         type="password"
         name="password"
         id="password"
-        required
         autocomplete="new-password"
         placeholder="******************"
-        class="px-3 py-2 border text-gray-700 shadow rounded appearance-none focus:outline-none focus:shadow-outline invalid:border-red-500 invalid:text-red-500 invalid:outline-red-500 peer" />
+        class="px-3 py-2 border text-gray-700 shadow rounded appearance-none focus:outline-none focus:shadow-outline peer" />
       <p>
         <small class="text-red-500 hidden peer-invalid:block"
           >Debe tener al menos 8 caracteres y un máximo de 32 caracteres</small
@@ -45,8 +44,9 @@
       class="bg-blue-500 my-5 hover:bg-blue-700 transition duration-300 ease-in-out text-white font-bold rounded-full px-4 py-2 focus:outline-none focus:shadow-outline">
       Iniciar Sesión
     </button>
-    <a href="#" class="text-blue-400 text-sm text-center"
-      >Aún no estas en Pet Care? Regístrate.</a
+    <a href="#" class="text-sm text-center"
+      >Aún no estas en Pet Care?
+      <span class="text-blue-400">Regístrate.</span></a
     >
   </form>
 </main>
