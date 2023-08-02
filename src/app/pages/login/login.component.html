@@ -1,9 +1,8 @@
 <main class="min-h-screen min-w-full flex justify-center items-center">
-  <form
-    class="flex flex-col max-w-lg border rounded-lg p-8 shadow md:min-w-[32rem]">
+  <form class="flex flex-col border rounded-lg p-8 shadow md:min-w-[32rem]">
     <h1 class="text-center text-4xl mb-6">Bienvenido! 🐶</h1>
     <div class="flex flex-col mb-4">
-      <label for="username" class="mb-2 text-sm font-bold text-gray-700"
+      <label for="email" class="mb-2 text-sm font-bold text-gray-700"
         >Correo electrónico</label
       >
       <input
@@ -11,10 +10,10 @@
         name="email"
         id="email"
         autocomplete="email"
-        placeholder="Correo electrónico"
-        class="px-3 py-2 text-sm text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline peer" />
+        placeholder="dog@gmail.com"
+        class="px-3 py-2 text-sm text-gray-700 border rounded shadow focus:outline-none" />
       <p>
-        <small class="hidden text-red-500 peer-invalid:block"
+        <small class="hidden text-red-500"
           >Debe cumplir con un formato válido de correo electrónico</small
         >
       </p>
@@ -29,9 +28,9 @@
         id="password"
         autocomplete="new-password"
         placeholder="******************"
-        class="px-3 py-2 border text-gray-700 shadow rounded appearance-none focus:outline-none focus:shadow-outline peer" />
+        class="px-3 py-2 border text-gray-700 shadow rounded focus:outline-none" />
       <p>
-        <small class="text-red-500 hidden peer-invalid:block"
+        <small class="text-red-500 hidden"
           >Debe tener al menos 8 caracteres y un máximo de 32 caracteres</small
         >
       </p>
@@ -41,7 +40,7 @@
     >
     <button
       type="submit"
-      class="bg-blue-500 my-5 hover:bg-blue-700 transition duration-300 ease-in-out text-white font-bold rounded-full px-4 py-2 focus:outline-none focus:shadow-outline">
+      class="bg-blue-500 my-5 hover:bg-blue-700 transition duration-300 ease-in-out text-white font-bold rounded-full px-4 py-2 focus:outline-none">
       Iniciar Sesión
     </button>
     <a href="#" class="text-sm text-center"
