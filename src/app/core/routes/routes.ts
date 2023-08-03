@@ -5,14 +5,21 @@ export const ROUTES: Routes = [
     path: 'login',
     loadComponent: () =>
       import('@pages/login/login.component').then(
-        module => module.LoginComponent
+        component => component.LoginComponent
       ),
   },
   {
     path: 'register',
     loadComponent: () =>
       import('@pages/register/register.component').then(
-        module => module.RegisterComponent
+        component => component.RegisterComponent
+      ),
+  },
+  {
+    path: 'forgot-password',
+    loadComponent: () =>
+      import('@pages/forgot-password/forgot-password.component').then(
+        component => component.ForgotPasswordComponent
       ),
   },
 ];
