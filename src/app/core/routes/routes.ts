@@ -2,6 +2,12 @@ import { Routes } from '@angular/router';
 
 export const ROUTES: Routes = [
   {
+    path: '',
+    loadComponent: () => import('@pages/home/home.component').then(
+      component => component.HomeComponent
+    ),
+  },
+  {
     path: 'login',
     loadComponent: () =>
       import('@pages/login/login.component').then(

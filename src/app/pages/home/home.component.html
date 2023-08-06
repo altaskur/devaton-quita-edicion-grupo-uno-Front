@@ -1,0 +1,151 @@
+<header class="page-header relative h-[690px] md:h-[790px] lg:h-[490px] xl:h-[490px] 2xl:h-[790px]">
+  <div class="banner h-[600px] md:h-[690px] lg:h-[400px] xl:h-[400px] 2xl:h-[600px]"></div>
+  <div class="absolute z-[1] top-0 | h-[600px] md:h-[690px] lg:h-[400px] xl:h-[400px] 2xl:h-[600px] w-full | flex justify-center">
+    <div class="max-w-6xl h-full mx-4 grid lg:grid-cols-2">
+      <div class="flex flex-col justify-center items-center lg:items-start">
+        <h1 class="text-white text-4xl mb-4">Bienvenido a Pet Care</h1>
+        <p class="text-white text-2xl">Somos la plataforma de servicios para mascotas lirderes en latinoamerica y España</p>
+        <div class="h-[200px] lg:h-[0px]"></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full absolute bottom-0 flex justify-center lg:justify-end">
+    <div class="w-full max-w-[400px] xl:max-w[400px] 2xl:max-w-[600px] h-auto">
+      <img src="assets/images/mascotas-header.png" alt="" class="w-full">
+    </div>
+  </div>
+</header>
+
+<section class="max-w-6xl m-auto mb-20">
+  <div class="mx-4">
+    <h2 class="text-3xl text-slate-700 mb-10 font-bold">Buscar por categoria</h2>
+    <div class="overflow-auto relative">
+      <div class="flex flex-nowrap gap-4" style="justify-content: space-between;">
+        <div class="w-[200px] flex-none">
+          <div class="p-8 bg-slate-100 flex flex-col items-center rounded-[16px]">
+            <app-svg-image path="assets/images/veterinaria.svg" [width]="100" [height]="100"></app-svg-image>
+            <div class=" font-bold uppercase text-slate-700 mt-4">veterinaria</div>
+            <div class="text-slate-500">120 servicios</div>
+          </div>
+        </div>
+        <div class="w-[200px] flex-none">
+          <div class="p-8 bg-slate-100 flex flex-col items-center rounded-[16px]">
+            <app-svg-image path="assets/images/cuidado.svg" [width]="100" [height]="100"></app-svg-image>
+            <div class=" font-bold uppercase text-slate-700 mt-4">cuidado</div>
+            <div class="text-slate-500">120 servicios</div>
+          </div>
+        </div>
+        <div class="w-[200px] flex-none">
+          <div class="p-8 bg-slate-100 flex flex-col items-center rounded-[16px]">
+            <app-svg-image path="assets/images/paseo.svg" [width]="100" [height]="100"></app-svg-image>
+            <div class=" font-bold uppercase text-slate-700 mt-4">paseo</div>
+            <div class="text-slate-500">120 servicios</div>
+          </div>
+        </div>
+        <div class="w-[200px] flex-none">
+          <div class="p-8 bg-slate-100 flex flex-col items-center rounded-[16px]">
+            <app-svg-image path="assets/images/restaurant.svg" [width]="100" [height]="100"></app-svg-image>
+            <div class=" font-bold uppercase text-slate-700 mt-4">restaurante</div>
+            <div class="text-slate-500">120 servicios</div>
+          </div>
+        </div>
+        <div class="w-[200px] flex-none">
+          <div class="p-8 bg-slate-100 flex flex-col items-center rounded-[16px]">
+            <app-svg-image path="assets/images/aseo.svg" [width]="100" [height]="100"></app-svg-image>
+            <div class=" font-bold uppercase text-slate-700 mt-4">aseo</div>
+            <div class="text-slate-500">120 servicios</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bg-slate-100 py-20">
+  <section class="max-w-6xl m-auto mb-20">
+    <div class="mx-4">
+      <h2 class="text-3xl text-slate-700 mb-10 font-bold">Servicios más vendidos</h2>
+      <div class="overflow-auto relative py-4">
+        <div class="flex flex-nowrap gap-4" style="justify-content: space-between;">
+          <div class="w-[330px] flex-none">
+            <div class="mb-2">
+              <img src="assets/images/service-preview.png" alt="" class="w-full">
+            </div>
+            <div class="text-slate-700 font-bold">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="flex mt-2 gap-2 items-cente">
+              <app-ratings-star class="flex items-center" [rating]="4.5"></app-ratings-star>
+              <span class="text-slate-400">(120 comentarios)</span>
+            </div>
+          </div>
+
+          <div class="w-[330px] flex-none">
+            <div class="mb-2">
+              <img src="assets/images/service-preview.png" alt="" class="w-full">
+            </div>
+            <div class="text-slate-700 font-bold">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="flex mt-2 gap-2 items-cente">
+              <app-ratings-star class="flex items-center" [rating]="4.5"></app-ratings-star>
+              <span class="text-slate-400">(120 comentarios)</span>
+            </div>
+          </div>
+
+          <div class="w-[330px] flex-none">
+            <div class="mb-2">
+              <img src="assets/images/service-preview.png" alt="" class="w-full">
+            </div>
+            <div class="text-slate-700 font-bold">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="flex mt-2 gap-2 items-cente">
+              <app-ratings-star class="flex items-center" [rating]="4.5"></app-ratings-star>
+              <span class="text-slate-400">(120 comentarios)</span>
+            </div>
+          </div>
+
+          <div class="w-[330px] flex-none">
+            <div class="mb-2">
+              <img src="assets/images/service-preview.png" alt="" class="w-full">
+            </div>
+            <div class="text-slate-700 font-bold">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="flex mt-2 gap-2 items-cente">
+              <app-ratings-star class="flex items-center" [rating]="4.5"></app-ratings-star>
+              <span class="text-slate-400">(120 comentarios)</span>
+            </div>
+          </div>
+
+          <div class="w-[330px] flex-none">
+            <div class="mb-2">
+              <img src="assets/images/service-preview.png" alt="" class="w-full">
+            </div>
+            <div class="text-slate-700 font-bold">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="flex mt-2 gap-2 items-cente">
+              <app-ratings-star class="flex items-center" [rating]="4.5"></app-ratings-star>
+              <span class="text-slate-400">(120 comentarios)</span>
+            </div>
+          </div>
+
+          <div class="w-[330px] flex-none">
+            <div class="mb-2">
+              <img src="assets/images/service-preview.png" alt="" class="w-full">
+            </div>
+            <div class="text-slate-700 font-bold">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="flex mt-2 gap-2 items-cente">
+              <app-ratings-star class="flex items-center" [rating]="4.5"></app-ratings-star>
+              <span class="text-slate-400">(120 comentarios)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
