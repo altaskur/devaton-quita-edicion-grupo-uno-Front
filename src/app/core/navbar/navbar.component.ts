@@ -11,7 +11,19 @@ import { RouterLink } from '@angular/router';
 export class NavbarComponent {
   ISAUTH: boolean = false;
 
-  toggleMenu() {
-    console.log('Menu clicked');
+  openMenu() {
+    const NAVBAR = document.getElementById('navbar');
+    NAVBAR?.classList.remove('hidden');
+    NAVBAR?.classList.add('flex');
+  }
+
+  closeMenu() {
+    const NAVBAR = document.getElementById('navbar');
+    NAVBAR?.classList.remove('flex');
+    NAVBAR?.classList.add('hidden');
+  }
+
+  closeSesion() {
+    console.log('Close Sesión');
   }
 }

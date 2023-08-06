@@ -1,16 +1,16 @@
 <header class="bg-white sticky top-0 p-4">
   <div class="max-w-7xl mx-auto flex justify-between items-baseline gap-8">
-    <p class="text-3xl font-bold">
+    <a [routerLink]="['/home']" class="text-3xl font-bold">
       <span class="text-orange-500">Pet</span> Care
-    </p>
+    </a>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      class="w-10 h-10 md:hidden z-50"
-      (click)="toggleMenu()">
+      class="w-10 h-10 md:hidden"
+      (click)="openMenu()">
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -18,11 +18,42 @@
     </svg>
     <nav
       id="navbar"
-      class="hidden flex-grow justify-between gap-4 md:flex md:flex-row md:justify-between">
+      class="absolute top-0 left-0 w-full h-screen bg-white p-24 hidden flex-col flex-grow justify-between gap-4 md:p-4 md:static md:w-auto md:h-auto md:flex md:flex-row md:justify-between">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-10 h-10 md:hidden absolute top-4 right-4"
+        (click)="closeMenu()">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
       <ul class="flex flex-col flex-grow items-center gap-4 md:flex-row">
-        <li><a class="text-xl text-gray-700">Link 1</a></li>
-        <li><a class="text-xl text-gray-700">Link 2</a></li>
-        <li><a class="text-xl text-gray-700">Link 3</a></li>
+        <li>
+          <a
+            (click)="closeMenu()"
+            class="text-xl text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
+            >Link 1</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="closeMenu()"
+            class="text-xl text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
+            >Link 2</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="closeMenu()"
+            class="text-xl text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
+            >Link 3</a
+          >
+        </li>
       </ul>
       <div class="hidden lg:block">
         <svg
@@ -44,27 +75,43 @@
           placeholder="Search"
           class="py-2 ps-10 pe-2 border text-gray-700 rounded-full focus:outline-none" />
       </div>
-      <div class="flex flex-col md:block" *ngIf="!ISAUTH">
+      <div class="flex flex-col gap-4 md:block" *ngIf="!ISAUTH">
         <a
           [routerLink]="['/login']"
+          (click)="closeMenu()"
           class="transition duration-300 ease-in-out text-orange-500 text-center font-bold rounded-full px-4 py-2 focus:outline-none"
           >Iniciar Sesión</a
         >
         <a
           [routerLink]="['/register']"
+          (click)="closeMenu()"
           class="bg-orange-500 border-orange-600 hover:bg-orange-600 transition duration-300 ease-in-out text-white text-center font-bold rounded-full px-4 py-2 focus:outline-none"
           >Registro</a
         >
       </div>
-      <div class="hidden gap-4 md:flex" *ngIf="ISAUTH">
-        <div class="text-right">
+      <div
+        class="flex flex-col-reverse items-stretch md:flex-row gap-4"
+        *ngIf="ISAUTH">
+        <div class="text-center md:text-right">
           <p class="text-orange-500">Elisa Contreras</p>
           <p>example@email.com</p>
         </div>
         <img
-          class="rounded-full w-12 h-12 object-cover"
           src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          class="mx-auto rounded-full w-36 h-36 md:w-12 md:h-12 object-cover border-4 md:border-2 border-orange-500"
           alt="Avatar" />
+      </div>
+      <div class="flex flex-col gap-4 md:hidden" *ngIf="ISAUTH">
+        <button
+          (click)="closeSesion()"
+          class="transition duration-300 ease-in-out text-orange-500 text-center font-bold rounded-full px-4 py-2 focus:outline-none">
+          Cerrar Sesión
+        </button>
+        <a
+          [routerLink]="['/profile']"
+          class="bg-orange-500 border-orange-600 hover:bg-orange-600 transition duration-300 ease-in-out text-white text-center font-bold rounded-full px-4 py-2 focus:outline-none"
+          >Mi Perfil</a
+        >
       </div>
     </nav>
   </div>
