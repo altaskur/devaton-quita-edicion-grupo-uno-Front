@@ -12,6 +12,9 @@ module.exports = {
       gray: ({ theme }) => theme('colors.gray')
     },
     extend: {
+      backgroundImage: {
+        'banner': "url('./assets/images/banner.png')"
+      }
     },
     colors: {
       primary: colors.orange,
