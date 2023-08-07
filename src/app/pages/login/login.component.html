@@ -1,53 +1,59 @@
-<main class="min-h-screen min-w-full flex justify-center items-center">
-  <form class="flex flex-col border rounded-lg p-8 shadow md:min-w-[32rem]">
-    <h1 class="text-center text-4xl mb-6">Bienvenido! 🐶</h1>
-    <div class="flex flex-col mb-4">
-      <label for="email" class="mb-2 text-sm font-bold text-gray-700"
-        >Correo electrónico</label
-      >
+<app-container-auth>
+  <span card-title>Iniciar sesión! 🐶</span>
+
+  <div card-body class="mb-8">
+    <div class="flex flex-col">
+      <label for="email" class="my-1 ms-6 text-sm font-medium text-gray-600">
+        Correo electrónico
+      </label>
+
       <input
         type="email"
         name="email"
         id="email"
         autocomplete="email"
-        placeholder="dog@gmail.com"
-        class="px-3 py-2 text-sm text-gray-700 border rounded shadow focus:outline-none" />
+        placeholder="ejemplo@dominio.com"
+        class="px-3 py-2 text-base ps-6 rounded-3xl border-gray-400 border focus:outline-none focus:border-orange-700" />
       <p>
         <small class="hidden text-red-500"
           >Debe cumplir con un formato válido de correo electrónico</small
         >
       </p>
     </div>
-    <div class="flex flex-col mb-4">
-      <label for="password" class="text-sm font-bold mb-2 text-gray-700"
-        >Contraseña</label
-      >
+    <div class="flex flex-col">
+      <label
+        for="password"
+        class="mb-1 mt-2 ms-6 text-sm font-medium text-gray-600">
+        Contraseña
+      </label>
       <input
         type="password"
         name="password"
         id="password"
         autocomplete="new-password"
         placeholder="******************"
-        class="px-3 py-2 border text-gray-700 shadow rounded focus:outline-none" />
+        class="px-3 py-2 text-base ps-6 rounded-3xl border-gray-400 border focus:outline-none focus:border-orange-700" />
       <p>
         <small class="text-red-500 hidden"
           >Debe tener al menos 8 caracteres y un máximo de 32 caracteres</small
         >
       </p>
     </div>
+  </div>
+
+  <div card-actions class="flex flex-col">
     <a
       [routerLink]="['/forgot-password']"
-      class="text-blue-400 text-sm text-right"
+      class="text-orange-500 text-sm text-right"
       >Has olvidado tu contraseña?</a
     >
-    <button
-      type="submit"
-      class="bg-blue-500 my-5 hover:bg-blue-700 transition duration-300 ease-in-out text-white font-bold rounded-full px-4 py-2 focus:outline-none">
-      Iniciar Sesión
-    </button>
-    <a [routerLink]="['/register']" class="text-sm text-center"
+    <app-button content="Iniciar sesión"></app-button>
+
+    <a
+      [routerLink]="['/register']"
+      class="text-sm text-gray-700 font-medium text-center"
       >Aún no estas en Pet Care?
-      <span class="text-blue-400">Regístrate.</span></a
+      <span class="text-orange-500 font-normal">Regístrate.</span></a
     >
-  </form>
-</main>
+  </div>
+</app-container-auth>
