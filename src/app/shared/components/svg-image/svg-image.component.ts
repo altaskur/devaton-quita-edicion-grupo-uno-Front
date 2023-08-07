@@ -7,29 +7,25 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <object 
-      *ngIf="currentSVG" 
-      type="image/svg+xml" 
-      [data]="SVGFile" 
-      [height]="height" 
-      [width]="width"
-    ></object>
-  `
+    <object
+      *ngIf="currentSVG"
+      type="image/svg+xml"
+      [data]="SVGFile"
+      [height]="height"
+      [width]="width"></object>
+  `,
 })
 export class SvgImageComponent implements OnInit {
-
   SVGFile?: SafeUrl;
-  currentSVG?: boolean; 
+  currentSVG?: boolean;
   @Input() path!: string;
   @Input() height: number = 64;
   @Input() width: number = 64;
 
-  constructor(private sanitizer: DomSanitizer) {
-  }
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
     this.currentSVG = true;
     this.SVGFile = this.sanitizer.bypassSecurityTrustResourceUrl(this.path);
   }
-
 }

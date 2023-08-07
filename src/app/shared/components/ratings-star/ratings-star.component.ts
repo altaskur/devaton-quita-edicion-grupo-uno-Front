@@ -9,20 +9,32 @@ import { SvgImageComponent } from '../svg-image/svg-image.component';
   template: `
     <div class="flex gap-2">
       <div *ngFor="let star of starCounter; let i = index">
-        <app-svg-image [width]="16" [height]="16" *ngIf="rate - i >= 1" path="assets/images/star-filled.svg"></app-svg-image>
-        <app-svg-image [width]="16" [height]="16" *ngIf="rate - i === 0.5" path="assets/images/star-half.svg"></app-svg-image>
-        <app-svg-image [width]="16" [height]="16" *ngIf="rate - i <= 0" path="assets/images/star-outline.svg"></app-svg-image>
+        <app-svg-image
+          [width]="16"
+          [height]="16"
+          *ngIf="rate - i >= 1"
+          path="assets/images/star-filled.svg"></app-svg-image>
+        <app-svg-image
+          [width]="16"
+          [height]="16"
+          *ngIf="rate - i === 0.5"
+          path="assets/images/star-half.svg"></app-svg-image>
+        <app-svg-image
+          [width]="16"
+          [height]="16"
+          *ngIf="rate - i <= 0"
+          path="assets/images/star-outline.svg"></app-svg-image>
       </div>
     </div>
-  `
+  `,
 })
 export class RatingsStarComponent {
   @Input() rating: number = 0;
 
-  constructor() { }
+  constructor() {}
 
   get starCounter() {
-    return new Array(5).fill(0)
+    return new Array(5).fill(0);
   }
 
   get rate() {
