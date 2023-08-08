@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 @Component({
@@ -9,18 +9,18 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  ISAUTH: boolean = false;
+  ISAUTH = false;
+
+  @ViewChild('navbar') navbar!: ElementRef<HTMLElement>;
 
   openMenu() {
-    const NAVBAR = document.getElementById('navbar');
-    NAVBAR?.classList.remove('hidden');
-    NAVBAR?.classList.add('flex');
+    this.navbar.nativeElement.classList.remove('hidden');
+    this.navbar.nativeElement.classList.add('flex');
   }
 
   closeMenu() {
-    const NAVBAR = document.getElementById('navbar');
-    NAVBAR?.classList.remove('flex');
-    NAVBAR?.classList.add('hidden');
+    this.navbar.nativeElement.classList.remove('flex');
+    this.navbar.nativeElement.classList.add('hidden');
   }
 
   closeSesion() {
