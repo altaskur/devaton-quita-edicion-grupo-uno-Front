@@ -8,9 +8,6 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    fill: {
-      gray: ({ theme }) => theme('colors.gray')
-    },
     extend: {
       backgroundImage: {
         'banner': "url('./assets/images/banner.png')"
