@@ -7,7 +7,12 @@ import { SvgImageComponent } from '@shared/components/svg-image/svg-image.compon
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonComponent, SvgImageComponent, RatingsStarComponent, FooterComponent],
+  imports: [
+    ButtonComponent,
+    SvgImageComponent,
+    RatingsStarComponent,
+    FooterComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
