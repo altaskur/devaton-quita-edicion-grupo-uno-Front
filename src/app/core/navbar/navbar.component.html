@@ -1,104 +1,63 @@
-<header class="bg-white sticky top-0 px-4 py-2">
-  <div
-    class="flex flex-col justify-between items-center gap-2 md:flex-row md:flex-wrap">
-    <div class="flex justify-between items-center w-full md:w-auto">
-      <a [routerLink]="['/home']" class="text-3xl font-bold">
-        <span class="text-orange-500">Pet</span> Care
-      </a>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-10 h-10 md:hidden cursor-pointer"
-        (click)="openMenu()">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-      </svg>
-    </div>
-    <nav
-      #navbar
-      class="absolute top-0 left-0 w-full h-screen bg-white p-24 hidden flex-col flex-grow justify-between gap-4 md:p-4 md:static md:w-auto md:h-auto md:flex md:flex-row md:justify-between">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-10 h-10 md:hidden absolute top-2 right-4 cursor-pointer"
-        (click)="closeMenu()">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M6 18L18 6M6 6l12 12" />
-      </svg>
-      <ul class="flex flex-col items-center flex-grow gap-4 md:flex-row">
-        <li>
-          <a
-            (click)="closeMenu()"
-            class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
-            >Link 1</a
-          >
-        </li>
-        <li>
-          <a
-            (click)="closeMenu()"
-            class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
-            >Link 2</a
-          >
-        </li>
-        <li>
-          <a
-            (click)="closeMenu()"
-            class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
-            >Link 3</a
-          >
-        </li>
-      </ul>
-      <div class="flex flex-col gap-4 md:flex md:flex-row" *ngIf="!ISAUTH">
+<header
+  class="bg-white sticky top-0 px-4 py-2 grid gap-x-4 grid-cols-[150px_1fr] grid-rows-2 lg:grid-rows-1 items-center">
+  <a [routerLink]="['/home']" class="text-3xl font-bold">
+    <span class="text-orange-500">Pet</span> Care
+  </a>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="w-10 h-10 block cursor-pointer ml-auto md:hidden"
+    (click)="openMenu()">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+  <nav
+    #navbar
+    class="absolute top-0 left-0 w-full h-screen bg-white p-24 hidden flex-col flex-grow justify-between gap-4 md:p-0 md:static md:w-auto md:h-auto md:flex md:flex-row md:justify-between md:items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-10 h-10 absolute top-2 right-4 cursor-pointer md:hidden"
+      (click)="closeMenu()">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    <ul
+      class="flex flex-none flex-col items-center flex-grow gap-4 md:flex-row">
+      <li>
         <a
-          [routerLink]="['/login']"
           (click)="closeMenu()"
-          class="transition duration-300 ease-in-out text-orange-500 text-center font-bold rounded-full px-4 py-2 focus:outline-none"
-          >Iniciar Sesión</a
+          class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
+          >Link 1</a
         >
+      </li>
+      <li>
         <a
-          [routerLink]="['/register']"
           (click)="closeMenu()"
-          class="bg-orange-500 border-orange-600 hover:bg-orange-600 transition duration-300 ease-in-out text-white text-center font-bold rounded-full px-4 py-2 focus:outline-none"
-          >Registro</a
+          class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
+          >Link 2</a
         >
-      </div>
-      <div
-        class="flex flex-col-reverse items-stretch md:flex-row gap-4"
-        *ngIf="ISAUTH">
-        <div class="text-center md:text-right">
-          <p class="text-orange-500">Elisa Contreras</p>
-          <p>example@email.com</p>
-        </div>
-        <img
-          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-          class="mx-auto rounded-full w-36 h-36 md:w-12 md:h-12 object-cover border-4 md:border-2 border-orange-500"
-          alt="Avatar" />
-      </div>
-      <div class="flex flex-col gap-4 md:hidden" *ngIf="ISAUTH">
-        <button
-          (click)="closeSesion()"
-          class="transition duration-300 ease-in-out text-orange-500 text-center font-bold rounded-full px-4 py-2 focus:outline-none">
-          Cerrar Sesión
-        </button>
+      </li>
+      <li>
         <a
-          [routerLink]="['/profile']"
-          class="bg-orange-500 border-orange-600 hover:bg-orange-600 transition duration-300 ease-in-out text-white text-center font-bold rounded-full px-4 py-2 focus:outline-none"
-          >Mi Perfil</a
+          (click)="closeMenu()"
+          class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
+          >Link 3</a
         >
-      </div>
-    </nav>
+      </li>
+    </ul>
     <div
-      class="flex items-center w-full xl:max-w-[30rem] border rounded-full text-gray-700">
+      class="hidden lg:flex max-w-xl items-center w-full border rounded-full text-gray-700">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -116,7 +75,70 @@
         name="search"
         id="search"
         placeholder="Buscar"
-        class="py-2 ps-2 pe-2 focus:outline-none" />
+        class="py-1 ps-2 pe-2 focus:outline-none" />
     </div>
+    <div
+      class="flex flex-none flex-col gap-4 md:flex md:flex-row"
+      *ngIf="!ISAUTH">
+      <a
+        [routerLink]="['/login']"
+        (click)="closeMenu()"
+        class="transition duration-300 ease-in-out text-orange-500 text-center font-bold rounded-full px-4 py-2 focus:outline-none"
+        >Iniciar Sesión</a
+      >
+      <a
+        [routerLink]="['/register']"
+        (click)="closeMenu()"
+        class="bg-orange-500 border-orange-600 hover:bg-orange-600 transition duration-300 ease-in-out text-white text-center font-bold rounded-full px-4 py-2 focus:outline-none"
+        >Registro</a
+      >
+    </div>
+    <div
+      class="flex flex-col-reverse items-stretch md:flex-row gap-4 flex-none"
+      *ngIf="ISAUTH">
+      <div class="text-center md:text-right">
+        <p class="text-orange-500">Elisa Contreras</p>
+        <p>example@email.com</p>
+      </div>
+      <a [routerLink]="['/profile']" class="self-center">
+        <img
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          class="mx-auto hover:scale-110 transition duration-300 ease-in-out rounded-full w-36 h-36 md:w-12 md:h-12 object-cover border-4 md:border-2 border-orange-500"
+          alt="Avatar" />
+      </a>
+    </div>
+    <div class="flex flex-col gap-4 md:hidden" *ngIf="ISAUTH">
+      <button
+        (click)="closeSesion()"
+        class="transition duration-300 ease-in-out text-orange-500 text-center font-bold rounded-full px-4 py-2 focus:outline-none">
+        Cerrar Sesión
+      </button>
+      <a
+        [routerLink]="['/profile']"
+        class="bg-orange-500 border-orange-600 hover:bg-orange-600 transition duration-300 ease-in-out text-white text-center font-bold rounded-full px-4 py-2 focus:outline-none"
+        >Mi Perfil</a
+      >
+    </div>
+  </nav>
+  <div
+    class="flex lg:hidden items-center w-full border rounded-full text-gray-700 col-span-2">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6 ml-4 stroke-gray-700">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+    </svg>
+    <input
+      type="search"
+      name="search"
+      id="search"
+      placeholder="Buscar"
+      class="py-1 ps-2 pe-2 focus:outline-none" />
   </div>
 </header>
