@@ -19,8 +19,8 @@ export class SvgImageComponent implements OnInit {
   SVGFile?: SafeUrl;
   currentSVG?: boolean;
   @Input() path!: string;
-  @Input() height: number = 64;
-  @Input() width: number = 64;
+  @Input() height = 64;
+  @Input() width = 64;
 
   constructor(private sanitizer: DomSanitizer) {}
 
