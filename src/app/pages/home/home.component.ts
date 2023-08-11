@@ -6,11 +6,7 @@ import { SvgImageComponent } from '@shared/components/svg-image/svg-image.compon
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    ButtonComponent,
-    SvgImageComponent,
-    RatingsStarComponent,
-  ],
+  imports: [ButtonComponent, SvgImageComponent, RatingsStarComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
