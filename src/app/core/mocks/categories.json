@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Veterinaria",
+    "image": "assets/images/veterinaria.svg"
+  },
+  {
+    "id": 2,
+    "name": "Paseo / Cuidado",
+    "image": "assets/images/paseo.svg"
+  },
+  {
+    "id": 3,
+    "name": "Aseo / Estética",
+    "image": "assets/images/aseo.svg"
+  }
+]

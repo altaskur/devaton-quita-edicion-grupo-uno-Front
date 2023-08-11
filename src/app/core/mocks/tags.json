@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Perros"
+  },
+  {
+    "id": 2,
+    "name": "Gatos"
+  },
+  {
+    "id": 3,
+    "name": "Corte"
+  },
+  {
+    "id": 4,
+    "name": "Pequeños"
+  },
+  {
+    "id": 5,
+    "name": "Medianos"
+  },
+  {
+    "id": 5,
+    "name": "Grandes"
+  }
+]
