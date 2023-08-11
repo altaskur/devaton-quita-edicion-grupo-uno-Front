@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
@@ -11,6 +13,10 @@ module.exports = {
         'banner': "url('./assets/images/banner.png')"
       }
     },
+    colors: {
+      primary: colors.orange,
+      ...colors
+    }
   },
   plugins: [
     plugin(function({ addComponents }) {
