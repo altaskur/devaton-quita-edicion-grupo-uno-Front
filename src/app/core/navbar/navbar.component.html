@@ -3,19 +3,11 @@
   <a [routerLink]="['/home']" class="text-3xl font-bold">
     <span class="text-orange-500">Pet</span> Care
   </a>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke-width="1.5"
-    stroke="currentColor"
-    class="w-10 h-10 block cursor-pointer ml-auto md:hidden"
-    (click)="openMenu()">
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-  </svg>
+  <app-svg-image
+    path="assets/images/menu.svg"
+    [width]="32"
+    [height]="32"
+    class="cursor-pointer ml-auto md:hidden"></app-svg-image>
   <nav
     #navbar
     class="absolute top-0 left-0 w-full h-screen bg-white p-24 hidden flex-col flex-grow justify-between gap-4 md:p-0 md:static md:w-auto md:h-auto md:flex md:flex-row md:justify-between md:items-center">
