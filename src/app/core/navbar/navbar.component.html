@@ -1,29 +1,28 @@
 <header
   class="bg-white sticky top-0 px-4 py-2 grid gap-x-4 grid-cols-[150px_1fr] grid-rows-2 lg:grid-rows-1 items-center">
-  <a [routerLink]="['/home']" class="text-3xl font-bold">
+  <a [routerLink]="['/home']" class="text-3xl font-bold mb-3">
     <span class="text-orange-500">Pet</span> Care
   </a>
-  <app-svg-image
-    path="assets/images/menu.svg"
-    [width]="32"
-    [height]="32"
-    class="cursor-pointer ml-auto md:hidden"></app-svg-image>
+  <button #openMenuBtn class="ml-auto md:hidden mb-1" (click)="openMenu()">
+    <app-svg-image
+      class="pointer-events-none"
+      path="assets/images/menu.svg"
+      [width]="32"
+      [height]="32"></app-svg-image>
+  </button>
   <nav
     #navbar
-    class="absolute top-0 left-0 w-full h-screen bg-white p-24 hidden flex-col flex-grow justify-between gap-4 md:p-0 md:static md:w-auto md:h-auto md:flex md:flex-row md:justify-between md:items-center">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-10 h-10 absolute top-2 right-4 cursor-pointer md:hidden"
+    class="absolute z-10 top-0 left-0 w-full h-screen bg-white p-24 hidden flex-col flex-grow justify-between gap-4 md:p-0 md:static md:w-auto md:h-auto md:flex md:flex-row md:justify-between md:items-center">
+    <button
+      #closeMenuBtn
+      class="absolute top-4 right-4 md:hidden"
       (click)="closeMenu()">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M6 18L18 6M6 6l12 12" />
-    </svg>
+      <app-svg-image
+        class="pointer-events-none"
+        path="assets/images/close.svg"
+        [width]="32"
+        [height]="32"></app-svg-image>
+    </button>
     <ul
       class="flex flex-none flex-col items-center flex-grow gap-4 md:flex-row">
       <li>
@@ -50,18 +49,11 @@
     </ul>
     <div
       class="hidden lg:flex max-w-xl items-center w-full border rounded-full text-gray-700">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6 ml-4 stroke-gray-700 absolute">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-      </svg>
+      <app-svg-image
+        class="absolute ml-4"
+        path="assets/images/search.svg"
+        [width]="24"
+        [height]="24"></app-svg-image>
       <input
         type="search"
         name="search"
@@ -114,18 +106,11 @@
   </nav>
   <div
     class="flex lg:hidden items-center w-full border rounded-full text-gray-700 col-span-2">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6 ml-4 stroke-gray-700 absolute">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-    </svg>
+    <app-svg-image
+      class="absolute ml-4"
+      path="assets/images/search.svg"
+      [width]="24"
+      [height]="24"></app-svg-image>
     <input
       type="search"
       name="search"
