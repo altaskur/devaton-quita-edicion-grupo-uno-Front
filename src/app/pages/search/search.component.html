@@ -1,0 +1,60 @@
+<section class="py-3 border-b-2">
+  <div class="container">
+    <div class="flex justify-between mx-4">
+      <div></div>
+      <button
+        (click)="showFilters = !showFilters"
+        class="bg-orange-500 hover:bg-orange-600 transition duration-300 ease-in-out text-white font-bold focus:outline-none px-4 py-2 rounded-full flex items-center [svg]text-red-700">
+        <app-svg-image
+          path="assets/images/filter.svg"
+          [width]="18"
+          [height]="18"
+          class="mr-2"></app-svg-image>
+        filters
+      </button>
+    </div>
+  </div>
+  <div class="container" *ngIf="!showFilters">
+    <form [formGroup]="filters">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <app-input-select
+          label="Categoría"
+          formControlName="category"
+          [options]="categories"></app-input-select>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="container my-8">
+  <div class="mx-4 mb-4">
+    <div class="text-slate-500">Búsqueda:</div>
+    <div class="text-slate-700 text-2xl">{{ serviceSearchTerm }}</div>
+    <div
+      class="text-slate-500"
+      *ngIf="!serviceListIsEmpty && !serviceListLoading">
+      {{ serviceListCount }} Resultados encontrados:
+    </div>
+  </div>
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-4">
+    <div *ngFor="let service of serviceList">
+      <app-service-preview [service]="service"></app-service-preview>
+    </div>
+  </div>
+
+  <div *ngIf="serviceListLoading" class="my-20 flex flex-col items-center">
+    <div class="text-2xl text-slate-500">Buscando servicios...</div>
+    <div class="text-xl text-slate-500">Por favor, espere.</div>
+  </div>
+
+  <div
+    *ngIf="serviceListIsEmpty && !serviceListLoading"
+    class="flex flex-col items-center my-20">
+    <div class="text-2xl text-red-700">
+      No se encontraron servicios para esta búsqueda.
+    </div>
+    <div class="text-xl text-slate-500">Intenta modificar los filtros.</div>
+  </div>
+</section>

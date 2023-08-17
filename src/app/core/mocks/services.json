@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "title": "Servicios clínicos",
+    "description": "Tratamiento de animales enfermos y control de enfermedades que limitan la producción. Incluye el diagnóstico, la prescripción, la cirugía y la hospitalización de los animales que lo requieran. Los servicios clínicos pueden atender a diferentes tipos de animales, desde mascotas hasta animales de granja o silvestres.",
+    "category_id": 1,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Servicios preventivos de enfermedades",
+    "description": "Vacunación, desparasitación, esterilización, etc. Son acciones que buscan prevenir la aparición o propagación de enfermedades en los animales. Los servicios preventivos de enfermedades también pueden incluir el asesoramiento sobre el manejo, la alimentación y la higiene de los animales.",
+    "category_id": 1,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Vacuna contra la rabia",
+    "description": "Venta o aplicación de productos veterinarios como antibióticos, antiparasitarios, vitaminas, etc. Son productos que ayudan a mejorar la salud y el bienestar de los animales. Los servicios de suministro de medicamentos, vacunas y otros productos pueden ofrecerse en la clínica o a domicilio.",
+    "category_id": 1,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Cirugía veterinaria",
+    "description": "Intervenciones quirúrgicas para tratar enfermedades o lesiones en los animales. Incluye la esterilización, la castración, la extirpación de tumores, la reparación de fracturas, etc. Los servicios de cirugía veterinaria pueden ofrecerse en la clínica o a domicilio.",
+    "category_id": 1,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Fisioterapia",
+    "description": "Rehabilitación de animales con problemas musculares, articulares o neurológicos. Incluye el uso de técnicas como el masaje, la electroterapia, la hidroterapia o la acupuntura. Los servicios de fisioterapia pueden ayudar a mejorar la movilidad, el dolor y la calidad de vida de los animales.",
+    "category_id": 3,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Cuidado de gatos en verano",
+    "description": "El verano es una época del año en la que debemos prestar especial atención a las necesidades de nuestros gatos. En este artículo te damos algunos consejos para que tu felino esté fresco, hidratado y feliz durante los meses más calurosos.",
+    "category_id": 2,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Paseo de perros",
+    "description": "Sacas a los perros a caminar por tu zona. Ideal para perros que tienen mucha energía o dueños que no tienen tiempo.",
+    "category_id": 2,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Cuidado a domicilio",
+    "description": "Te quedas con las mascotas en su casa y les das atención, comida y limpieza. Tus mascotas no salen de su entorno habitual.",
+    "category_id": 2,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Guardería de día",
+    "description": "Dejas al perro en la casa de un cuidador por la mañana y lo recoges por la tarde. Ideal para amantes de perros que trabajan desde casa.",
+    "category_id": 2,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },{
+    "id": 10,
+    "title": "Visitas a domicilio",
+    "description": "Pasas por la casa de las mascotas para jugar con ellas, darles de comer y sacarlas a hacer sus necesidades o limpiar la caja de arena.",
+    "category_id": 2,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  }, {
+    "id": 11,
+    "title": "Masaje de mascotas",
+    "description": "Un servicio de masaje de mascotas consiste en aplicar técnicas de manipulación manual sobre el cuerpo del animal para relajar sus músculos, mejorar su circulación, aliviar su estrés y aumentar su bienestar",
+    "category_id": 3,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  }, {
+    "id": 12,
+    "title": "Peluquería de mascotas",
+    "description": "En mi peluquería de mascotas, ofrezco un servicio de corte de pelo profesional, personalizado y de calidad para tu animal. Cuido su pelo con productos adecuados, lo cepillo, lo desenredo y lo peino para que luzca hermoso",
+    "category_id": 3,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Servicio anti garrapatas",
+    "description": "Elimino estos parásitos de tu mascota con métodos seguros y efectivos. También aplico un tratamiento preventivo para evitar que vuelvan a aparecer y proteger la salud de tu animal",
+    "category_id": 3,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Servicio anti pulgas",
+    "description": "Elimino estos parásitos de tu mascota con métodos seguros y efectivos. También aplico un tratamiento preventivo para evitar que vuelvan a aparecer y proteger la salud de tu animal",
+    "category_id": 3,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Ducha fria",
+    "description": "Baño con agua fría para refrescar a tu mascota en verano. Ideal para perros que tienen mucho calor o que no pueden salir a la calle por el calor.",
+    "category_id": 3,
+    "tags_id": [1, 4, 5],
+    "images": [
+      {
+        "id": 1,
+        "url": "assets/images/service-preview.png"
+      }
+    ]
+  }
+  
+]

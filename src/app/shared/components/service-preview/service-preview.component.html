@@ -1,0 +1,12 @@
+<div class="mb-2">
+  <img [src]="service.images[0].url" alt="" class="w-full" />
+</div>
+<div class="text-slate-700 font-bold">
+  {{ service.title }}
+</div>
+<div class="flex mt-2 gap-2 items-cente">
+  <app-ratings-star
+    class="flex items-center"
+    [rating]="service.rating"></app-ratings-star>
+  <span class="text-slate-400">({{ service.commentsCount }} comentarios)</span>
+</div>

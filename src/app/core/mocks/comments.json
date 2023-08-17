@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "service_id": 1,
+    "profile_id": 1,
+    "comment": "Excelente servicio.",
+    "rating": 5  
+  },
+  {
+    "id": 2,
+    "profile_id": 1,
+    "service_id": 2,
+    "comment": "Me gustó mucho el servicio preventivo que me ofrecieron en la clínica. Me hicieron una revisión completa y me dieron consejos para cuidar mi salud. El personal fue muy amable y profesional. Le doy 5 estrellas.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "profile_id": 1,
+    "service_id": 2,
+    "comment": "El servicio preventivo que contraté fue una decepción. Me cobraron mucho y me hicieron pocas pruebas. Además, el médico que me atendió fue muy grosero y no me explicó nada. No lo recomiendo para nada. Le doy 1 estrella.",
+    "rating": 1
+  },
+  {
+    "id": 4,
+    "profile_id": 1,
+    "service_id": 2,
+    "comment": "El servicio preventivo que recibí fue regular. Me hicieron algunas pruebas básicas y me dieron un informe con los resultados. El médico que me atendió fue correcto pero no muy simpático. Creo que podría mejorar la atención al cliente. Le doy 3 estrellas.",
+    "rating": 3
+  },
+  {
+    "id": 5,
+    "profile_id": 1,
+    "service_id": 6,
+    "comment": "Estoy muy contenta con el servicio de Cuidado de gatos en verano que contraté. Me cuidaron a mi gato durante dos semanas mientras yo estaba de vacaciones. Le dieron comida, agua, arena limpia y mucho cariño. Me enviaron fotos y vídeos todos los días para que viera cómo estaba. Mi gato estaba feliz y yo tranquila. Le doy 5 estrellas.",
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "profile_id": 1,
+    "service_id": 6,
+    "comment": "El servicio de Cuidado de gatos en verano que contraté fue un desastre. Me dejaron a mi gato solo en una jaula sin apenas espacio ni ventilación. Le dieron comida y agua de mala calidad y no le cambiaron la arena. Mi gato estaba estresado y sucio cuando lo recogí. Me cobraron una fortuna por un servicio pésimo. Le doy 1 estrella.",
+    "rating": 2
+  },
+  {
+    "id": 7,
+    "profile_id": 1,
+    "service_id": 6,
+    "comment": "El servicio de Cuidado de gatos en verano que contraté fue aceptable. Me cuidaron a mi gato durante una semana mientras yo estaba de viaje. Le dieron comida, agua, arena limpia y algo de atención. Me enviaron algunas fotos y vídeos cada dos o tres días para que viera cómo estaba. Mi gato estaba bien pero no muy contento. Creo que podrían mejorar la comunicación y el trato con el cliente. Le doy 3 estrellas.",
+    "rating": 3.5
+  },
+  {
+    "id": 16,
+    "comment": "Me encantó el servicio de Cuidado de gatos en verano. Fueron muy atentos y profesionales con mi gato. Se nota que les gustan los animales y que saben cómo tratarlos. Mi gato volvió a casa feliz y relajado. Le doy 5 estrellas.",
+    "rating": 5,
+    "profile_id": 1,
+    "service_id": 12
+  },
+  {
+    "id": 17,
+    "comment": "El servicio de Cuidado de gatos en verano fue una decepción. No cumplieron con lo que prometieron. Me dejaron a mi gato en una casa sucia y descuidada. Le dieron comida caducada y agua sucia. Mi gato volvió a casa enfermo y asustado. Le doy 1 estrella.",
+    "rating": 1,
+    "profile_id": 1,
+    "service_id": 12
+  },
+  {
+    "id": 18,
+    "comment": "El servicio de Cuidado de gatos en verano fue regular. Cumplieron con lo básico pero no me dieron mucha confianza. Me dejaron a mi gato en una casa con otros muchos animales. Le dieron comida y agua pero no le prestaron mucha atención. Mi gato volvió a casa indiferente y aburrido. Le doy 3 estrellas.",
+    "rating": 3,
+    "profile_id": 1,
+    "service_id": 12
+  },
+  {
+    "id": 19,
+    "comment": "Me gustó el servicio de Cuidado de gatos en verano. Fueron amables y responsables con mi gato. Me dejaron a mi gato en una casa limpia y cómoda. Le dieron comida, agua y arena de buena calidad. Mi gato volvió a casa contento y juguetón. Le doy 4 estrellas.",
+    "rating": 4,
+    "profile_id": 1,
+    "service_id": 12
+  },
+  {
+    "id": 20,
+    "comment": "El servicio de Cuidado de gatos en verano fue excelente. Fueron muy cariñosos y divertidos con mi gato. Me dejaron a mi gato en una casa con un jardín precioso. Le dieron comida, agua y arena de primera calidad. Además, le hicieron juegos y le dieron premios. Mi gato volvió a casa feliz y agradecido. Le doy 5 estrellas.",
+    "rating": 5,
+    "profile_id": 1,
+    "service_id": 12
+  }
+  
+]
