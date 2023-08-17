@@ -29,4 +29,11 @@ export const ROUTES: Routes = [
         component => component.ForgotPasswordComponent
       ),
   },
+  {
+    path: 'profile',
+    loadComponent: () =>
+      import('@pages/profile/profile.component').then(
+        component => component.ProfileComponent
+      ),
+  },
 ];
