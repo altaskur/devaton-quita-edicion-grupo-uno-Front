@@ -1,9 +1,28 @@
-<section class="mb-8 py-3 border-b-2">
+<section class="py-3 border-b-2">
   <div class="container">
     <div class="flex justify-between mx-4">
       <div></div>
-      <app-button> Filtros </app-button>
+      <button
+        (click)="showFilters = !showFilters"
+        class="bg-orange-500 hover:bg-orange-600 transition duration-300 ease-in-out text-white font-bold focus:outline-none px-4 py-2 rounded-full flex items-center [svg]text-red-700">
+        <app-svg-image
+          path="assets/images/filter.svg"
+          [width]="18"
+          [height]="18"
+          class="mr-2"></app-svg-image>
+        filters
+      </button>
     </div>
+  </div>
+  <div class="container" *ngIf="!showFilters">
+    <form [formGroup]="filters">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <app-input-select
+          label="Categoría"
+          formControlName="category"
+          [options]="categories"></app-input-select>
+      </div>
+    </form>
   </div>
 </section>
 

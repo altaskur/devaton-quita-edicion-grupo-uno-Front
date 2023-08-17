@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Service } from '@core/interfaces/Service';
-import { Observable, Subject, timer } from 'rxjs';
+import { Observable, BehaviorSubject, timer } from 'rxjs';
 
-import servicesJson from '../../mocks/services.json';
-import commentsJson from '../../mocks/comments.json';
-import tagsJson from '../../mocks/tags.json';
-import categoryJson from '../../mocks/categories.json';
+import servicesJson from '../mocks/services.json';
+import commentsJson from '../mocks/comments.json';
+import tagsJson from '../mocks/tags.json';
+import categoryJson from '../mocks/categories.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServiceService {
-  private _services$ = new Subject<Service[]>();
+  private _services$ = new BehaviorSubject<Service[]>([]);
 
   constructor() {}
 
