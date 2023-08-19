@@ -36,4 +36,11 @@ export const ROUTES: Routes = [
         component => component.ProfileComponent
       ),
   },
+  {
+    path: 'search',
+    loadComponent: () =>
+      import('@pages/search/search.component').then(
+        component => component.SearchComponent
+      ),
+  },
 ];
