@@ -9,6 +9,7 @@ export interface Service {
   images: Image[];
   category_id: number;
   tags_id: number[];
+  description: string;
 
   rating: number;
   commentsCount: number;

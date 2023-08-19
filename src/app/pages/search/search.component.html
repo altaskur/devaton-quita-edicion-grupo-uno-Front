@@ -30,31 +30,39 @@
   <div class="mx-4 mb-4">
     <div class="text-slate-500">Búsqueda:</div>
     <div class="text-slate-700 text-2xl">{{ serviceSearchTerm }}</div>
-    <div
-      class="text-slate-500"
-      *ngIf="!serviceListIsEmpty && !serviceListLoading">
-      {{ serviceListCount }} Resultados encontrados:
+    <div class="text-slate-500" *ngIf="(services | async)?.length">
+      {{ (services | async)?.length }} Resultados encontrados:
     </div>
   </div>
 
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-4">
-    <div *ngFor="let service of serviceList">
-      <app-service-preview [service]="service"></app-service-preview>
-    </div>
-  </div>
+  <div class="mt-4">
+    <div *ngIf="services | async as lista; else loading">
+      <ng-container *ngIf="lista.length > 0; else empty">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-4">
+          <ng-container *ngFor="let service of lista">
+            <app-service-preview [service]="service"></app-service-preview>
+          </ng-container>
+        </div>
+      </ng-container>
 
-  <div *ngIf="serviceListLoading" class="my-20 flex flex-col items-center">
-    <div class="text-2xl text-slate-500">Buscando servicios...</div>
-    <div class="text-xl text-slate-500">Por favor, espere.</div>
-  </div>
-
-  <div
-    *ngIf="serviceListIsEmpty && !serviceListLoading"
-    class="flex flex-col items-center my-20">
-    <div class="text-2xl text-red-700">
-      No se encontraron servicios para esta búsqueda.
+      <ng-template #empty>
+        <div class="flex flex-col items-center my-20">
+          <div class="text-2xl text-red-700">
+            No se encontraron servicios para esta búsqueda.
+          </div>
+          <div class="text-xl text-slate-500">
+            Intenta modificar los filtros.
+          </div>
+        </div>
+      </ng-template>
     </div>
-    <div class="text-xl text-slate-500">Intenta modificar los filtros.</div>
+
+    <ng-template #loading>
+      <div class="my-20 flex flex-col items-center">
+        <div class="text-2xl text-slate-500">Buscando servicios...</div>
+        <div class="text-xl text-slate-500">Por favor, espere.</div>
+      </div>
+    </ng-template>
   </div>
 </section>
