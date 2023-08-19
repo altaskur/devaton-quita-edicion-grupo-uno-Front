@@ -2,10 +2,16 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RatingsStarComponent } from '@shared/components/ratings-star/ratings-star.component';
 import { ButtonComponent } from '@shared/components/button/button.component';
+import { CardOwnerProfileComponent } from '@shared/components/card-owner-profile/card-owner-profile.component';
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule, RatingsStarComponent, ButtonComponent],
+  imports: [
+    CommonModule,
+    RatingsStarComponent,
+    ButtonComponent,
+    CardOwnerProfileComponent,
+  ],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
 })
