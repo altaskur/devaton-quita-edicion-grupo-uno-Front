@@ -24,10 +24,6 @@ import { CategoryService } from '@core/services/category.service';
   templateUrl: './search.component.html',
 })
 export class SearchComponent implements OnInit {
-  serviceList: Service[] = [];
-  serviceListIsEmpty = true;
-  serviceListCount = 0;
-  serviceListLoading = true;
   serviceSearchTerm = '';
   showFilters = false;
   filters: FormGroup;
@@ -71,19 +67,9 @@ export class SearchComponent implements OnInit {
       }
 
       // Load services
-      this.serviceListLoading = true;
-      this.serviceList = [];
-
       this.serviceService.loadServices({
         term: this.serviceSearchTerm,
       });
-    });
-
-    this.services.subscribe(data => {
-      this.serviceList = data;
-      this.serviceListLoading = false;
-      this.serviceListIsEmpty = data.length <= 0;
-      this.serviceListCount = data.length;
     });
   }
 

@@ -1,0 +1,37 @@
+<div class="border-b-[1px] py-2">
+  <div class="container">
+    <div class="mx-4">
+      <div class="md:hidden">
+        <div class="flex justify-center py-2" (click)="showMenu = !showMenu">
+          <app-svg-image
+            path="assets/images/chevron-down.svg"
+            [width]="18"
+            [height]="18"></app-svg-image>
+        </div>
+      </div>
+
+      <div [@slideUpDown]="showMenu ? 'down' : 'up'" class="overflow-hidden">
+        <ul class="flex flex-col md:flex-row gap-4">
+          <li class="">
+            <a
+              [routerLink]="['my-services']"
+              routerLinkActive="bg-primary-50"
+              class="p-2 px-4 text-primary-500 rounded-lg block hover:bg-primary-50 font-bold">
+              Mis servicios
+            </a>
+          </li>
+          <li class="">
+            <a
+              [routerLink]="['contracts']"
+              routerLinkActive="bg-primary-50"
+              class="p-2 px-4 rounded-lg block text-primary-500 hover:bg-primary-50 font-bold">
+              Servicios Contratados
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

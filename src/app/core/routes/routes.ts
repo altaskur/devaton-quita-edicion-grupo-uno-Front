@@ -36,4 +36,8 @@ export const ROUTES: Routes = [
         component => component.SearchComponent
       ),
   },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('@pages/dashboard/routes').then(m => m.ROUTES),
+  },
 ];
