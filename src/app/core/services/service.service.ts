@@ -37,6 +37,7 @@ export class ServiceService {
   }
 
   loadServices(filters?: { term?: string }) {
+    this._services$.next(null);
     const SERVICES: Service[] = servicesJson
       .filter(item => {
         if (!filters) return true;
