@@ -19,6 +19,13 @@ export const ROUTES: Route[] = [
           ),
       },
       {
+        path: 'my-services/create',
+        loadComponent: () =>
+          import('../create-service/create-service.component').then(
+            c => c.CreateServiceComponent
+          ),
+      },
+      {
         path: 'contracts',
         loadComponent: () =>
           import('../contracts/contracts.component').then(

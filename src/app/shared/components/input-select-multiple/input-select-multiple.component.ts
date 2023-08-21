@@ -6,7 +6,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { ClickOutsideModule } from '@core/directives/click-outside.directive';
 import { EscapeKeyModule } from '@core/directives/escape-key.directive';
 import { SvgImageComponent } from '../svg-image/svg-image.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   animate,
   state,
@@ -16,7 +15,7 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-input-select',
+  selector: 'app-input-select-multiple',
   standalone: true,
   imports: [
     CommonModule,
@@ -24,11 +23,11 @@ import {
     EscapeKeyModule,
     SvgImageComponent,
   ],
-  templateUrl: './input-select.component.html',
+  templateUrl: './input-select-multiple.component.html',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: InputSelectComponent,
+      useExisting: InputSelectMultipleComponent,
       multi: true,
     },
   ],
@@ -52,29 +51,34 @@ import {
     ]),
   ],
 })
-export class InputSelectComponent implements ControlValueAccessor, OnInit {
+export class InputSelectMultipleComponent
+  implements OnInit, ControlValueAccessor
+{
   showOptions = false;
-  private _optionSelected = new BehaviorSubject<InputSelectOption | undefined>(
-    undefined
-  );
 
   @Input() options!: Observable<InputSelectOption[]>;
 
   @Input() label?: string;
 
+  private _optionSelected$ = new BehaviorSubject<
+    InputSelectOption[] | undefined
+  >(undefined);
+
+  private _optionSelected: InputSelectOption[] = [];
+
   constructor() {}
 
   ngOnInit(): void {
-    this._optionSelected.subscribe(option => {
+    this._optionSelected$.subscribe(option => {
       if (option) this.onChange(option);
     });
   }
 
-  get value(): Observable<InputSelectOption | undefined> {
-    return this._optionSelected.asObservable();
+  get value(): Observable<InputSelectOption[] | undefined> {
+    return this._optionSelected$.asObservable();
   }
 
-  onChange = (value: InputSelectOption) => {};
+  onChange = (value: InputSelectOption[]) => {};
 
   onTouched = () => {};
 
@@ -92,8 +96,20 @@ export class InputSelectComponent implements ControlValueAccessor, OnInit {
     this.showOptions = !this.showOptions;
   }
 
+  isSelected(option: InputSelectOption): boolean {
+    return !!this._optionSelected.find(item => item.value === option.value);
+  }
+
   selectOption(option: InputSelectOption) {
-    this._optionSelected.next(option);
+    if (this.isSelected(option)) {
+      this._optionSelected = this._optionSelected.filter(
+        item => item.value !== option.value
+      );
+    } else {
+      this._optionSelected.push(option);
+    }
+
+    this._optionSelected$.next(this._optionSelected);
     this.showOptions = false;
   }
 }
