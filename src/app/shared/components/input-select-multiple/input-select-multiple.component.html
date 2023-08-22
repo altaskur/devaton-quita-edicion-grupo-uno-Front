@@ -20,9 +20,14 @@
       <div
         (click)="showMenuOptions()"
         class="px-6 py-2 text-base cursor-pointer">
-        <span *ngIf="value | async; else defaultText">
-          {{ (value | async)?.label }}
+        <span *ngIf="value | async as list; else defaultText">
+          <ng-container *ngIf="list.length; else defaultText">
+            <ng-container *ngFor="let item of list; let i = index">
+              {{ item.label }}<span *ngIf="i < list.length - 1">, </span>
+            </ng-container>
+          </ng-container>
         </span>
+
         <ng-template #defaultText>
           <div class="flex justify-between items-center">
             <span class="text-slate-400">Seleccione una opción</span>
@@ -37,7 +42,9 @@
       <div [@optionAnimation]="showOptions ? 'show' : 'hide'">
         <div class="mb-2 mx-2 border-t-[1px] overflow-auto z-20 max-h-[200px]">
           <div
-            class="px-3 py-2 text-base text-slate-700 hover:bg-slate-100 rounded-md cursor-pointer"
+            class="px-3 py-2 text-base text-slate-700 rounded-md cursor-pointer"
+            [class.bg-primary-50]="isSelected(option)"
+            [class.hover:bg-slate-100]="!isSelected(option)"
             *ngFor="let option of options | async"
             (click)="selectOption(option)">
             {{ option.label }}

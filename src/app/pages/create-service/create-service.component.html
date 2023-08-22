@@ -1,0 +1,68 @@
+<div class="my-10">
+  <div class="container">
+    <div class="mx-4">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+        <h1 class="text-center lg:text-left text-2xl font-bold">
+          Publicar servicio
+        </h1>
+      </div>
+
+      <div class="mt-4">
+        <div class="grid grid-cols-1 lg:grid-cols-[max-content_1fr] gap-4">
+          <div class="lg:min-w-[600px] xl:min-w-[700px]">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="mb-2">
+                <app-input-text
+                  formControlName="title"
+                  label="Nombre del servicio"
+                  placeholder="Ej: Servicio de limpieza para perros con pulgas"></app-input-text>
+              </div>
+              <div class="mb-2">
+                <app-input-text
+                  formControlName="description"
+                  label="Descripcion"
+                  placeholder="Ej: Servicio de limpieza para perros con pulgas"
+                  variant="textarea"></app-input-text>
+              </div>
+              <div class="mb-2">
+                <app-input-select
+                  formControlName="category"
+                  label="Categoria"
+                  [options]="categories"></app-input-select>
+              </div>
+              <div class="mb-2">
+                <app-input-select-multiple
+                  formControlName="tags"
+                  label="Tags"
+                  [options]="tags"></app-input-select-multiple>
+              </div>
+              <div class="mb-8">
+                <app-input-select
+                  formControlName="city"
+                  label="Ciudad"
+                  [options]="cities"></app-input-select>
+              </div>
+              <div class="flex justify-between gap-4">
+                <button
+                  type="submit"
+                  class="bg-primary-500 hover:bg-primary-600 transition-colors duration-300 ease-in-out text-white font-bold rounded-full px-8 py-2 text-center">
+                  Publicar servicio
+                </button>
+
+                <a
+                  [routerLink]="['../']"
+                  class="text-red-500 font-bold rounded-full px-8 py-2 text-center">
+                  Cancelar
+                </a>
+              </div>
+            </form>
+          </div>
+
+          <div class="mt-4 hidden lg:block">
+            <!-- TODO -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

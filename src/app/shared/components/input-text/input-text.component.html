@@ -1,0 +1,50 @@
+<label
+  class="my-1 ms-6 text-sm font-medium text-gray-600 cursor-pointer"
+  for=""
+  *ngIf="label">
+  {{ label }}
+</label>
+<div
+  class="border rounded-3xl focus:border-orange-700 w-full bg-white px-6 py-2"
+  [class.border-red-500]="invalid"
+  [class.border-slate-300]="!showErrors">
+  <input
+    [type]="type"
+    [placeholder]="placeholder"
+    class="focus:outline-none w-full"
+    (keyup)="onChange($any($event.target).value)"
+    (focus)="onFocused()"
+    (click)="onTouched()"
+    (blur)="focusOut = true"
+    *ngIf="variant === 'text'" />
+  <textarea
+    [placeholder]="placeholder"
+    class="focus:outline-none w-full"
+    (keyup)="onChange($any($event.target).value)"
+    (focus)="onFocused()"
+    (click)="onTouched()"
+    (blur)="focusOut = true"
+    *ngIf="variant === 'textarea'"></textarea>
+</div>
+
+<div class="text-red-500 font-semibold ms-6" *ngIf="showErrors">
+  <small *ngIf="errors['required']"> Este campo es requerido </small>
+  <small *ngIf="errors['email']">
+    Debe cumplir con un formato válido de correo electrónico
+  </small>
+  <small *ngIf="errors['minlength']">
+    Debe tener al menos {{ errors['minlength'].requiredLength }} caracteres
+  </small>
+  <small *ngIf="errors['maxlength']">
+    Debe tener como máximo {{ errors['maxlength'].requiredLength }} caracteres
+  </small>
+  <small *ngIf="errors['pattern']">
+    Debe cumplir con el formato {{ errors['pattern'].requiredPattern }}
+  </small>
+  <small *ngIf="errors['min']">
+    Debe ser mayor o igual a {{ errors[''].min }}
+  </small>
+  <small *ngIf="errors['max']">
+    Debe ser menor o igual a {{ errors['max'].max }}
+  </small>
+</div>

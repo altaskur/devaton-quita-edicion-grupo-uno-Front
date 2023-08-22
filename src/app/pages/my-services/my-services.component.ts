@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceService } from '@core/services/service.service';
 import { listAnimation } from '@core/animations/list-animation';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-my-services',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './my-services.component.html',
   animations: [listAnimation],
 })
