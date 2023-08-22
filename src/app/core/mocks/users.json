@@ -8,7 +8,8 @@
     "image": "https://miro.medium.com/v2/resize:fit:2000/1*-0jTWcm6WuwwPCu2qknPOQ.jpeg",
     "zipcode": "92998-3874",
     "description": "Gran amante de los animales. Mi pasatiempo favorito es salir a pasear con mis dogos.",
-    "rating": 8
+    "rating": 8,
+    "totalContractedServices": 3
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "image": "https://media.revistavanityfair.es/photos/60e8364bfc86fee32f97c463/master/w_1600%2Cc_limit/211391.jpg",
     "zipcode": "92998-3874",
     "description": "Adoro a mis pequeños Raudo y Chispas. Les encanta sentarse conmigo en el sofa a ver una pelicula",
-    "rating": 3
+    "rating": 3,
+    "totalContractedServices": 8
   },
   {
     "id": 3,
@@ -30,6 +32,7 @@
     "image": "https://static1.mujerhoy.com/www/multimedia/201602/05/media/cortadas/madonna00--624x468.jpg",
     "zipcode": "92998-3874",
     "description": "Siempre he tenido animales en mi vida. Me encantan sobretodo los gatos pero también he llegado a tener algún perro.",
-    "rating": 3
+    "rating": 3,
+    "totalContractedServices": 6
   }
 ]
