@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "devathon-quinta-edicion-grupo-uno-front": {
+    "devathon-front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/devathon-quinta-edicion-grupo-uno-front",
+            "outputPath": "dist/devathon-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "devathon-quinta-edicion-grupo-uno-front:build:production"
+              "browserTarget": "devathon-front:build:production"
             },
             "development": {
-              "browserTarget": "devathon-quinta-edicion-grupo-uno-front:build:development"
+              "browserTarget": "devathon-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "devathon-quinta-edicion-grupo-uno-front:build"
+            "browserTarget": "devathon-front:build"
           }
         },
         "test": {
