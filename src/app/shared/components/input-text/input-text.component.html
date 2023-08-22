@@ -28,23 +28,23 @@
 </div>
 
 <div class="text-red-500 font-semibold ms-6" *ngIf="showErrors">
-  <span *ngIf="errors['required']"> Este campo es requerido </span>
-  <span *ngIf="errors['email']">
+  <small *ngIf="errors['required']"> Este campo es requerido </small>
+  <small *ngIf="errors['email']">
     Debe cumplir con un formato válido de correo electrónico
-  </span>
-  <span *ngIf="errors['minlength']">
+  </small>
+  <small *ngIf="errors['minlength']">
     Debe tener al menos {{ errors['minlength'].requiredLength }} caracteres
-  </span>
-  <span *ngIf="errors['maxlength']">
+  </small>
+  <small *ngIf="errors['maxlength']">
     Debe tener como máximo {{ errors['maxlength'].requiredLength }} caracteres
-  </span>
-  <span *ngIf="errors['pattern']">
+  </small>
+  <small *ngIf="errors['pattern']">
     Debe cumplir con el formato {{ errors['pattern'].requiredPattern }}
-  </span>
-  <span *ngIf="errors['min']">
+  </small>
+  <small *ngIf="errors['min']">
     Debe ser mayor o igual a {{ errors[''].min }}
-  </span>
-  <span *ngIf="errors['max']">
+  </small>
+  <small *ngIf="errors['max']">
     Debe ser menor o igual a {{ errors['max'].max }}
-  </span>
+  </small>
 </div>

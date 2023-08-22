@@ -81,6 +81,11 @@ export class CreateServiceComponent {
   }
 
   onSubmit(): void {
+    Object.keys(this.form.controls).forEach(control => {
+      this.form.get(control)?.markAsDirty();
+      this.form.get(control)?.markAsTouched();
+    });
+
     // TODO: Implements onSubmit
   }
 }

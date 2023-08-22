@@ -13,8 +13,10 @@
   <div class="relative">
     <div class="h-[42px]"></div>
     <div
-      class="border-slate-300 border rounded-3xl focus:outline-none focus:border-orange-700 overflow-hidden absolute top-0 w-full bg-white"
-      [class.z-10]="showOptions">
+      class="border rounded-3xl focus:outline-none focus:border-orange-700 overflow-hidden absolute top-0 w-full bg-white"
+      [class.z-10]="showOptions"
+      [class.border-slate-300]="!showErrors"
+      [class.border-red-500]="showErrors">
       <div
         (click)="showMenuOptions()"
         class="px-6 py-2 text-base cursor-pointer">
@@ -41,8 +43,8 @@
         <div class="mb-2 mx-2 border-t-[1px] overflow-auto z-20 max-h-[200px]">
           <div
             class="px-3 py-2 text-base text-slate-700 rounded-md cursor-pointer"
+            [class.bg-primary-50]="isSelected(option)"
             [class.hover:bg-slate-100]="!isSelected(option)"
-            [class.bg-primary-300]="isSelected(option)"
             *ngFor="let option of options | async"
             (click)="selectOption(option)">
             {{ option.label }}
@@ -50,5 +52,9 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="text-red-500 font-semibold ms-6" *ngIf="showErrors">
+    <small *ngIf="errors['required']"> Este campo es requerido </small>
   </div>
 </div>

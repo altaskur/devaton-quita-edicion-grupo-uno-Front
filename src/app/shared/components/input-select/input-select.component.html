@@ -13,8 +13,10 @@
   <div class="relative">
     <div class="h-[42px]"></div>
     <div
-      class="border-slate-300 border rounded-3xl focus:outline-none focus:border-orange-700 overflow-hidden absolute top-0 w-full bg-white"
-      [class.z-10]="showOptions">
+      class="border rounded-3xl focus:outline-none focus:border-orange-700 overflow-hidden absolute top-0 w-full bg-white"
+      [class.z-10]="showOptions"
+      [class.border-slate-300]="!showErrors"
+      [class.border-red-500]="showErrors">
       <div
         (click)="showMenuOptions()"
         class="px-6 py-2 text-base cursor-pointer">
@@ -43,5 +45,9 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="text-red-500 font-semibold ms-6" *ngIf="showErrors">
+    <small *ngIf="errors['required']"> Este campo es requerido </small>
   </div>
 </div>

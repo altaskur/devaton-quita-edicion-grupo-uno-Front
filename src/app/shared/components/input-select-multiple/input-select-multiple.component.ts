@@ -1,6 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Optional, Self, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import {
+  ControlValueAccessor,
+  NgControl,
+  ValidationErrors,
+} from '@angular/forms';
 import { InputSelectOption } from './input-select-option';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ClickOutsideModule } from '@core/directives/click-outside.directive';
@@ -24,13 +28,6 @@ import {
     SvgImageComponent,
   ],
   templateUrl: './input-select-multiple.component.html',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: InputSelectMultipleComponent,
-      multi: true,
-    },
-  ],
   animations: [
     trigger('optionAnimation', [
       state(
@@ -66,7 +63,11 @@ export class InputSelectMultipleComponent
 
   private _optionSelected: InputSelectOption[] = [];
 
-  constructor() {}
+  constructor(@Self() @Optional() private control: NgControl) {
+    if (control != null) {
+      control.valueAccessor = this;
+    }
+  }
 
   ngOnInit(): void {
     this._optionSelected$.subscribe(option => {
@@ -111,5 +112,25 @@ export class InputSelectMultipleComponent
 
     this._optionSelected$.next(this._optionSelected);
     this.showOptions = false;
+  }
+
+  public get invalid(): boolean {
+    return this.control.control?.invalid ?? false;
+  }
+
+  public get touched(): boolean {
+    return this.control.control?.touched ?? false;
+  }
+
+  public get dirty(): boolean {
+    return this.control.control?.dirty ?? false;
+  }
+
+  public get errors(): ValidationErrors {
+    return this.control.control?.errors ?? {};
+  }
+
+  public get showErrors(): boolean {
+    return this.invalid && this.touched && this.dirty;
   }
 }

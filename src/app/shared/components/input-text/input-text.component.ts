@@ -1,16 +1,7 @@
-import {
-  Component,
-  Input,
-  OnDestroy,
-  OnInit,
-  Optional,
-  Self,
-} from '@angular/core';
+import { Component, Input, Optional, Self } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
 import {
   ControlValueAccessor,
-  FormControl,
   NgControl,
   ReactiveFormsModule,
   ValidationErrors,
@@ -51,8 +42,6 @@ export class InputTextComponent implements ControlValueAccessor {
   }
 
   registerOnTouched(fn: () => void): void {
-    console.log('registerOnTouched');
-
     this.onTouched = fn;
   }
 
@@ -73,6 +62,6 @@ export class InputTextComponent implements ControlValueAccessor {
   }
 
   public get showErrors(): boolean {
-    return this.invalid && (this.touched || this.dirty) && this.focusOut;
+    return this.invalid && this.touched && this.dirty && this.focusOut;
   }
 }
