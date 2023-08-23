@@ -5,7 +5,9 @@ import { ButtonComponent } from '@shared/components/button/button.component';
 import { CardOwnerProfileComponent } from '@shared/components/card-owner-profile/card-owner-profile.component';
 import { CardReviewComponent } from '@shared/components/card-review/card-review.component';
 import usersJson from '@core/mocks/users.json';
+import commentsJson from '@core/mocks/comments.json';
 import { User } from '@core/interfaces/User';
+import { Comment } from '@core/interfaces/Comment';
 
 @Component({
   selector: 'app-profile',
@@ -24,6 +26,7 @@ export class ProfileComponent {
   constructor() {}
 
   userId: number = 3;
+  comments: Comment[] = commentsJson;
 
   getOwnerById(id: number) {
     let userData = usersJson.find(user => user.id === id);

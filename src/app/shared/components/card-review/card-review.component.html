@@ -6,12 +6,10 @@
       alt="Avatar" />
   </section>
   <section>
-    <h3>Maria Antonieta de las Nieves</h3>
-    <app-ratings-star></app-ratings-star>
+    <h3>Maria Vega</h3>
+    <app-ratings-star [rating]="comment.rating"></app-ratings-star>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni in culpa
-      fuga molestiae alias beatae eius quos, ipsa, eum perspiciatis maiores
-      aliquid esse nobis deserunt quaerat numquam adipisci dolore id.
+      {{ comment.comment }}
     </p>
   </section>
 </article>

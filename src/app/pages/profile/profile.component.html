@@ -3,8 +3,9 @@
 
   <h2 class="text-2xl font-semibold">Calificaciones</h2>
 
-  <app-card-review></app-card-review>
-  <app-card-review></app-card-review>
-  <app-card-review></app-card-review>
-  <app-card-review></app-card-review>
+  <section>
+    <app-card-review
+      *ngFor="let comment of comments"
+      [comment]="comment"></app-card-review>
+  </section>
 </div>
