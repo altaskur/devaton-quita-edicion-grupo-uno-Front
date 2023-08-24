@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RatingsStarComponent } from '../ratings-star/ratings-star.component';
-import { Comment } from '@core/interfaces/Comment';
-import usersJson from '@core/mocks/users.json';
 
 @Component({
   selector: 'app-card-review',
@@ -12,5 +10,10 @@ import usersJson from '@core/mocks/users.json';
   styleUrls: ['./card-review.component.css'],
 })
 export class CardReviewComponent {
-  @Input() comment!: Comment;
+  @Input() review!: {
+    name: string;
+    image: string;
+    rating: number;
+    comment: string;
+  };
 }

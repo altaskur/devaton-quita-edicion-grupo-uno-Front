@@ -27,11 +27,28 @@ export class ProfileComponent {
 
   userId: number = 3;
   comments: Comment[] = commentsJson;
+  reviews = this.createReviewsArray();
 
   getOwnerById(id: number) {
     let userData = usersJson.find(user => user.id === id);
 
     return userData;
+  }
+
+  createReviewsArray() {
+    let reviews = [];
+    for (const comment of commentsJson) {
+      let review = {
+        name: this.getOwnerById(comment.profile_id)?.name || 'Anonímo',
+        image:
+          this.getOwnerById(comment.profile_id)?.image || 'valor por defecto',
+        rating: comment.rating,
+        comment: comment.comment,
+      };
+
+      reviews.push(review);
+    }
+    return reviews;
   }
 
   user = this.getOwnerById(this.userId) as User;
