@@ -43,7 +43,9 @@
       </div>
     </form>
 
-    <ul class="flex flex-none flex-col items-center gap-4 md:flex-row mx-4" *ngIf="!ISAUTH">
+    <ul
+      class="flex flex-none flex-col items-center gap-4 md:flex-row mx-4"
+      *ngIf="ISAUTH">
       <li>
         <a
           [routerLink]="['/dashboard']"
