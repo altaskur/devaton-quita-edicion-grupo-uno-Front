@@ -9,7 +9,6 @@ import { debounceTime } from 'rxjs';
   standalone: true,
   imports: [CommonModule, RouterLink, SvgImageComponent, ReactiveFormsModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
   ISAUTH = false;

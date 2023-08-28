@@ -5,6 +5,5 @@ import { Component } from '@angular/core';
   selector: 'app-container-auth',
   standalone: true,
   templateUrl: './container-auth.component.html',
-  styleUrls: ['./container-auth.component.css'],
 })
 export class ContainerAuthComponent {}

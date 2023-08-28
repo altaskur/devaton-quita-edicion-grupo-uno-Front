@@ -8,6 +8,5 @@ import { ContainerAuthComponent } from '@shared/components/container-auth/contai
   standalone: true,
   imports: [RouterLink, ContainerAuthComponent, ButtonComponent],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {}

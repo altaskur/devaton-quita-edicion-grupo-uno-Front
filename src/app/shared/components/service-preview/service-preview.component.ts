@@ -7,7 +7,6 @@ import { RatingsStarComponent } from '../ratings-star/ratings-star.component';
   standalone: true,
   imports: [RatingsStarComponent],
   templateUrl: './service-preview.component.html',
-  styleUrls: ['./service-preview.component.css'],
 })
 export class ServicePreviewComponent {
   @Input() service!: Service;
