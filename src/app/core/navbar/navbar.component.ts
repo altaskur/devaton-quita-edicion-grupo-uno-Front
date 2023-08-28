@@ -10,7 +10,6 @@ import { AuthService } from '@core/services/auth.service';
   standalone: true,
   imports: [CommonModule, RouterLink, SvgImageComponent, ReactiveFormsModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
   ISAUTH = false;

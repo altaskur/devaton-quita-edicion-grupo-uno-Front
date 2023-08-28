@@ -20,7 +20,6 @@ import { ContainerAuthComponent } from '@shared/components/container-auth/contai
     ReactiveFormsModule,
   ],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   form: FormGroup;
