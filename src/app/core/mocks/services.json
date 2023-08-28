@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "title": "Cirugía veterinaria",
+    "title": "Cirugía veterinaria para gatos y perros",
     "description": "Intervenciones quirúrgicas para tratar enfermedades o lesiones en los animales. Incluye la esterilización, la castración, la extirpación de tumores, la reparación de fracturas, etc. Los servicios de cirugía veterinaria pueden ofrecerse en la clínica o a domicilio.",
     "category_id": 1,
     "tags_id": [1, 4, 5],
@@ -53,7 +53,7 @@
   },
   {
     "id": 5,
-    "title": "Fisioterapia",
+    "title": "Fisioterapia para perros y gatos",
     "description": "Rehabilitación de animales con problemas musculares, articulares o neurológicos. Incluye el uso de técnicas como el masaje, la electroterapia, la hidroterapia o la acupuntura. Los servicios de fisioterapia pueden ayudar a mejorar la movilidad, el dolor y la calidad de vida de los animales.",
     "category_id": 3,
     "tags_id": [1, 4, 5],
@@ -92,7 +92,7 @@
   },
   {
     "id": 8,
-    "title": "Cuidado a domicilio",
+    "title": "Cuidado a domicilio para gatos",
     "description": "Te quedas con las mascotas en su casa y les das atención, comida y limpieza. Tus mascotas no salen de su entorno habitual.",
     "category_id": 2,
     "tags_id": [1, 4, 5],
@@ -105,7 +105,7 @@
   },
   {
     "id": 9,
-    "title": "Guardería de día",
+    "title": "Guardería de día para gatos",
     "description": "Dejas al perro en la casa de un cuidador por la mañana y lo recoges por la tarde. Ideal para amantes de perros que trabajan desde casa.",
     "category_id": 2,
     "tags_id": [1, 4, 5],
@@ -118,7 +118,7 @@
   },
   {
     "id": 10,
-    "title": "Visitas a domicilio",
+    "title": "Visitas a domicilio para mascotas (perros y gatos)",
     "description": "Pasas por la casa de las mascotas para jugar con ellas, darles de comer y sacarlas a hacer sus necesidades o limpiar la caja de arena.",
     "category_id": 2,
     "tags_id": [1, 4, 5],
@@ -131,7 +131,7 @@
   },
   {
     "id": 11,
-    "title": "Masaje de mascotas",
+    "title": "Masaje para perros con aceites esenciales",
     "description": "Un servicio de masaje de mascotas consiste en aplicar técnicas de manipulación manual sobre el cuerpo del animal para relajar sus músculos, mejorar su circulación, aliviar su estrés y aumentar su bienestar",
     "category_id": 3,
     "tags_id": [1, 4, 5],
@@ -144,7 +144,7 @@
   },
   {
     "id": 12,
-    "title": "Peluquería de mascotas",
+    "title": "Peluquería de mascotas para perros y gatos",
     "description": "En mi peluquería de mascotas, ofrezco un servicio de corte de pelo profesional, personalizado y de calidad para tu animal. Cuido su pelo con productos adecuados, lo cepillo, lo desenredo y lo peino para que luzca hermoso",
     "category_id": 3,
     "tags_id": [1, 4, 5],
@@ -157,7 +157,7 @@
   },
   {
     "id": 13,
-    "title": "Servicio anti garrapatas",
+    "title": "Servicio anti garrapatas para perros",
     "description": "Elimino estos parásitos de tu mascota con métodos seguros y efectivos. También aplico un tratamiento preventivo para evitar que vuelvan a aparecer y proteger la salud de tu animal",
     "category_id": 3,
     "tags_id": [1, 4, 5],
@@ -170,7 +170,7 @@
   },
   {
     "id": 14,
-    "title": "Servicio anti pulgas",
+    "title": "Servicio anti pulgas para perros y gatos",
     "description": "Elimino estos parásitos de tu mascota con métodos seguros y efectivos. También aplico un tratamiento preventivo para evitar que vuelvan a aparecer y proteger la salud de tu animal",
     "category_id": 3,
     "tags_id": [1, 4, 5],
@@ -183,14 +183,14 @@
   },
   {
     "id": 15,
-    "title": "Ducha fria",
+    "title": "Ducha fria para perros",
     "description": "Baño con agua fría para refrescar a tu mascota en verano. Ideal para perros que tienen mucho calor o que no pueden salir a la calle por el calor.",
     "category_id": 3,
     "tags_id": [1, 4, 5],
     "images": [
       {
         "id": 1,
-        "url": "https://www.rover.com/blog/wp-content/uploads/dog-labrador-bathtime-1024x683.jpg"
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuU7j1xhgnth5jwMGY4VKZ0d6iVrl7xqRFrQ&usqp=CAU"
       }
     ]
   }

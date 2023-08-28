@@ -14,7 +14,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
       <ng-content #contentBlock></ng-content>
     </button>
   `,
-  styleUrls: ['./button.component.css'],
 })
 export class ButtonComponent {
   @Output() action = new EventEmitter<Boolean>();
