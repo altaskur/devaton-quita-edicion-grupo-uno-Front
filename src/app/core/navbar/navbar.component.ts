@@ -4,6 +4,7 @@ import { Router, RouterLink } from '@angular/router';
 import { SvgImageComponent } from '@shared/components/svg-image/svg-image.component';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 import { debounceTime } from 'rxjs';
+import { AuthService } from '@core/services/auth.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -18,7 +19,8 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     _fb: FormBuilder,
-    private _router: Router
+    private _router: Router,
+    private _auth: AuthService
   ) {
     this.searchForm = _fb.group({
       term: [''],
@@ -35,6 +37,9 @@ export class NavbarComponent implements OnInit {
         });
       }
     });
+
+    const user = this._auth.getUserSignedIn();
+    this.ISAUTH = !!user.name;
   }
 
   openMenu() {

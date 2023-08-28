@@ -14,7 +14,7 @@
       </button>
     </div>
   </div>
-  <div class="container" *ngIf="!showFilters">
+  <div class="container" *ngIf="showFilters">
     <form [formGroup]="filters">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <app-input-select

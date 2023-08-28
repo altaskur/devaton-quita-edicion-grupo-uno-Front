@@ -23,30 +23,8 @@
         [width]="32"
         [height]="32"></app-svg-image>
     </button>
-    <ul
-      class="flex flex-none flex-col items-center flex-grow gap-4 md:flex-row">
-      <li>
-        <a
-          (click)="closeMenu()"
-          class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
-          >Link 1</a
-        >
-      </li>
-      <li>
-        <a
-          (click)="closeMenu()"
-          class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
-          >Link 2</a
-        >
-      </li>
-      <li>
-        <a
-          (click)="closeMenu()"
-          class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
-          >Link 3</a
-        >
-      </li>
-    </ul>
+    <div class="ml-auto"></div>
+
     <form [formGroup]="searchForm">
       <div
         class="hidden lg:flex max-w-xl items-center w-full border rounded-full text-gray-700">
@@ -64,6 +42,17 @@
           class="py-1 ps-12 pe-2 rounded-full focus:outline-none w-full" />
       </div>
     </form>
+
+    <ul class="flex flex-none flex-col items-center gap-4 md:flex-row mx-4">
+      <li>
+        <a
+          (click)="closeMenu()"
+          class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out cursor-pointer"
+          >Mi Cuenta</a
+        >
+      </li>
+    </ul>
+
     <div
       class="flex flex-none flex-col gap-4 md:flex md:flex-row"
       *ngIf="!ISAUTH">
