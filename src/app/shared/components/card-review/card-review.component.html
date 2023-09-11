@@ -1,0 +1,15 @@
+<article class="p-4 my-4 border rounded border-slate-300 mx-auto flex gap-2">
+  <section class="shrink-0">
+    <img
+      class="rounded-full w-16 h-16 object-cover border-4 border-white"
+      src="{{ review.image }}"
+      alt="Avatar" />
+  </section>
+  <section>
+    <h3>{{ review.name }}</h3>
+    <app-ratings-star [rating]="review.rating"></app-ratings-star>
+    <p>
+      {{ review.comment }}
+    </p>
+  </section>
+</article>

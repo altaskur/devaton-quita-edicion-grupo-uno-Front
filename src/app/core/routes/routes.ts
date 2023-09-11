@@ -30,6 +30,13 @@ export const ROUTES: Routes = [
       ),
   },
   {
+    path: 'profile',
+    loadComponent: () =>
+      import('@pages/profile/profile.component').then(
+        component => component.ProfileComponent
+      ),
+  },
+  {
     path: 'search',
     loadComponent: () =>
       import('@pages/search/search.component').then(
